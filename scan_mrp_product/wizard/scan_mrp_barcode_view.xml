@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="scan_barcode_form_dev_wizard" model="ir.ui.view">
+		<field name="name">Scan Barcode</field>
+		<field name="model">wizard.mrp.scan.dev.serial</field>
+		<field name="arch" type="xml">
+			<form string="Scan Barcode" version="11.0">	
+				<group>
+					<field name="serial" class="barcode-serial" widget="BarcodeSerial"/>
+				</group>
+				<footer>
+					<button string="Cancel" special="cancel"/>
+				</footer>
+			</form>
+		</field>
+	</record>
+	
+	<record id="mrp_barcode_scan_action" model="ir.actions.act_window">
+		<field name="name">MRP Barcode Scan</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">wizard.mrp.scan.dev.serial</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="view_id" ref="scan_barcode_form_dev_wizard"/>
+		<field name="target">new</field>
+	</record>
+		
+</odoo>
+

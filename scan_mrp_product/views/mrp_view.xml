@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<odoo>
+	<record id="mrp_scan_serial_wiz" model="ir.ui.view">
+		<field name="name">mrp serial scan inherited</field>
+		<field name="model">mrp.production</field>
+		<field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+		<field name="arch" type="xml">
+			<xpath expr="//button[@name='action_toggle_is_locked']" position="after">
+				<button string="Scan Product" type="object" name="scan_dev_wizard" states="planned" class="oe_highlight"/>
+			</xpath>
+		</field>
+	</record>
+	
+	<record id="mrp_scan_kanban_view" model="ir.ui.view">
+	  <field name="name">mrp.production.kanban.scan</field>
+	  <field name="model">mrp.production</field>
+	  <field name="mode">primary</field>
+	  <field eval="7" name="priority"/>
+	  <field name="inherit_id" ref="mrp.mrp_production_kanban_view"/>
+	  <field name="arch" type="xml">
+	    <kanban position="attributes">
+	        <attribute name="js_class">KanbanBarcodeScan</attribute>
+	    </kanban>
+		</field>
+	</record>
+
+	<record id="mrp_scan_form_view" model="ir.ui.view">
+	  <field name="name">mrp.production.form.scan</field>
+	  <field name="model">mrp.production</field>
+	  <field name="mode">primary</field>
+	  <field eval="7" name="priority"/>
+	  <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+	  <field name="arch" type="xml">
+	    <form position="attributes">
+	        <attribute name="js_class">FormViewBarcode</attribute>
+	    </form>
+		</field>
+	</record>
+	
+	<menuitem action="mrp_barcode_scan_action"
+    id="menu_mrp_barcode_scan"
+    parent="mrp.menu_mrp_root"
+    sequence="300"/>
+			
+</odoo>

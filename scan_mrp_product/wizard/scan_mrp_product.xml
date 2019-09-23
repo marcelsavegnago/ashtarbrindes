@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="scan_product_form_dev_wizard" model="ir.ui.view">
+		<field name="name">Scan Product</field>
+		<field name="model">wizard.product.scan.dev.serial</field>
+		<field name="arch" type="xml">
+			<form string="Scan Serials" version="11.0">
+				<p style="color: red;"><field name="text" readonly="1"/></p>
+				<group>
+					<field name="serial" widget="OperationWidget"/>
+					<field name="mrp_id" invisible="1"/>
+				</group>
+				<footer>
+					<button string="Cancel" special="cancel"/>
+				</footer>
+			</form>
+		</field>
+	</record>
+</odoo>
+

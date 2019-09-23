@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<odoo>
+	<template id="assets_backend" name="Category Assets" inherit_id="web.assets_backend">
+      <xpath expr="." position="inside">
+          <script type="text/javascript" src="/scan_mrp_product/static/src/js/barcode.js"></script>
+          <!--script type="text/javascript" src="/scan_mrp_product/static/src/js/barcodeproduct.js"></script-->
+      </xpath>
+  </template>
+</odoo>
