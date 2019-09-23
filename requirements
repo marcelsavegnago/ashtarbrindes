@@ -1,9 +1,10 @@
 pillow
 ofxparse==0.16
 suds-jurko-requests
-pytrustnfe3>=0.10.0
+pytrustnfe3
 python3-cnab
 python3-boleto
 xmlsec
 lxml==4.2.3
 pycnab240
+
