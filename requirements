@@ -7,3 +7,11 @@ python3-boleto
 xmlsec
 lxml==4.2.3
 pycnab240
+PyXmlSec
+lxml
+signxml
+suds-jurko
+suds-jurko-requests
+reportlab
+Jinja2
+
